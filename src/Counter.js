@@ -4,13 +4,13 @@ import './scss/main.scss'
 
 const Counter = () => {
   const [isDone, setIsDone] = useState(0);
-  
+
   return (
     <div>
       <p>{isDone}</p>
       <ul>
         <li>
-          <button onClick={() => setIsDone(isDone - 10)}>
+          <button onClick={() => {setIsDone(isDone - 10)}}> {/* いつものアロー関数の、引数の後に使う{}は省略できる？↓↑ {setIsDone()} と setIsDone() でちらでも可？  */}
             -10
           </button>
         </li>
