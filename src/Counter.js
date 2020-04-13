@@ -1,38 +1,42 @@
 import React, { useState } from 'react'
+import Button from './Button'
 import './scss/main.scss'
 
 
 const Counter = () => {
-  const [isDone, setIsDone] = useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     <div>
-      <p>{isDone}</p>
+      <p>{count}</p>
       <ul>
         <li>
-          <button onClick={() => {setIsDone(isDone - 10)}}> {/* いつものアロー関数の、引数の後に使う{}は省略できる？↓↑ {setIsDone()} と setIsDone() でちらでも可？  */}
-            -10
-          </button>
+          {/* <button onClick={() => {setCount(count - 10)}}> */}
+          {/* いつものアロー関数の、引数の後に使う{}は1行で書くときは省略できる↓↑ */}
+            {/* -10 */}
+          {/* </button> */}
         </li>
         <li>
-          <button onClick={() => setIsDone(isDone - 1)}>
+          {/* <button onClick={() => setCount(count - 1)}>
             -1
-          </button>
+          </button> */}
         </li>
         <li>
-          <button onClick={() => setIsDone(isDone - isDone)}>
+          {/* <button onClick={() => setCount(count - count)}>
             recet
-          </button>
+          </button> */}
         </li>
         <li>
-          <button onClick={() => setIsDone(isDone + 1)}>
+          {/* <button onClick={() => setCount(count + 1)}>
             +1
-          </button>
+          </button> */}
         </li>
         <li>
-          <button onClick={() => setIsDone(isDone + 10)}>
+          {/* <button onClick={() => setCount(count + 10)}>
             +10
-          </button>
+          </button> */}
+          <Button setCount={setCount} count={count} /> {/* 左辺は名前、右辺は式 */}
+          {/* Button({setCount:setCount, count:count}) */}
         </li>
       </ul>
     </div>
