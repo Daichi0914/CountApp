@@ -23,7 +23,7 @@ const Counter = () => {
         </li>
         <li>
           {/* <button onClick={() => setCount(count - count)}>
-            recet
+            reset
           </button> */}
         </li>
         <li>
